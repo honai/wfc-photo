@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.photo-detail {
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.photo-detail .close-button {
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+  position: absolute;
+}
+.photo-detail .close-button .material-icons {
+  font-size: 30px;
+}
+
+.photo-detail > .photo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-detail > .photo > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* reset */
+.photo-detail a {
+  color: unset;
+}

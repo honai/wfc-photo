@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.photos-wrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.photos-wrap > .item {
+}
+
+.photos-wrap > .item > img {
+  object-fit: cover;
+}
