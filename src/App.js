@@ -6,46 +6,39 @@ import PhotoList from './PhotoList';
 import './animation.css';
 
 const App = () => {
-  const [getRange, setGetRange] = useState({limit: 10, offset: 0});
+  const [listSize, setListSize] = useState({before: 0, current: 10});
   const [apiStatus, setApiStatus] = useState({isLoaded: false, error: false});
   const [imagesList, setImagesList] = useState([]);
   const [currentDetailStatus, setCurrentDetailStatus] = useState({id: null, imageInfo: {}});
-  // const fetchImageList = async (limit, offset) => {
-  //   const url = 'https://wfc-2019.firebaseapp.com/images?'
-  //     + 'limit=' + String(limit)
-  //     + 'offset' + String(offset);
-  //   try {
-  //     const response = await fetch(url);
-  //     return response.json();
-  //   } catch(e) {
-  //     console.log('Error!');
-  //   }
-  // }
   useEffect(() => {
     const url = 'https://wfc-2019.firebaseapp.com/images?'
-      + 'limit=' + String(getRange.limit)
-      + 'offset' + String(getRange.offset);
+      + 'offset=' + String(listSize.before)
+      + '&limit=' + String(listSize.current - listSize.before);
+    console.log('started fetch');
     fetch(url)
       .then(response => response.json())
       .then(response => {
-          if(response.ok) {
-            setImagesList(response.data.images);
-            setApiStatus({...apiStatus, isLoaded: true});
-          } else {
-            setApiStatus({...apiStatus, isLoaded: true, error: true});
-          }
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
+        if(response.ok) {
+          setImagesList([...imagesList, ...response.data.images]);
+          setApiStatus({...apiStatus, isLoaded: true, error: false});
+        } else {
           setApiStatus({...apiStatus, isLoaded: true, error: true});
+          console.log('response is not ok.');
         }
-      )
-  }, getRange)
+      },
+      (error) => {
+        setApiStatus({...apiStatus, isLoaded: true, error: true});
+        console.log(error);
+      });
+  }, [listSize]);
 
   function onLinkClick(id) {
     setCurrentDetailStatus({id: id, imageInfo: imagesList.find(elem => elem.id === id)});
+  }
+
+  function gainListSize(size) {
+    setListSize({before: listSize.current, current: listSize.current + size});
+    console.log(listSize);
   }
   
   if (apiStatus.error) {
@@ -58,6 +51,7 @@ const App = () => {
         <div>
           <div><h3>フォト</h3></div>
           <PhotoList imagesList={imagesList} onLinkClick={onLinkClick} />
+          <button onClick={gainListSize}>もっと読み込む</button>
 
           <Route path='/detail/:id' render={(props) => (
             <PhotoDetail {...props} image={currentDetailStatus.imageInfo} />
