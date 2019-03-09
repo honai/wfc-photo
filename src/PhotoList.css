@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.photos-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.photos-wrap > .item {
+  width: 98%;
+}
+
+.photos-wrap > .item > img {
+}
+
+@media screen and (min-width: 500px) {
+  .photos-wrap > .item {
+    width: 48%;
+  }
+}

@@ -4,7 +4,7 @@ import './detail.css';
 
 const PhotoDetail = (props) => {
   const { id } = props.match.params;
-  const [image, setImages] = useState({});
+  const [image, setImages] = useState(props.image);
   useEffect(() => {
     fetch('https://wfc-2019.firebaseapp.com/image/' + id)
       .then(response => response.json())
