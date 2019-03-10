@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/wfc-photo/static/js/runtime~main.a7af6a8b.js"
   },
   {
-    "revision": "c479f82395fad000d21c",
-    "url": "/wfc-photo/static/js/main.be88b169.chunk.js"
+    "revision": "d7d3b0549f11ed8a6b63",
+    "url": "/wfc-photo/static/js/main.83f16acf.chunk.js"
   },
   {
     "revision": "1bc3f3f9d223fbab8ae0",
     "url": "/wfc-photo/static/js/2.b1b0c089.chunk.js"
   },
   {
-    "revision": "c479f82395fad000d21c",
-    "url": "/wfc-photo/static/css/main.5c46397b.chunk.css"
+    "revision": "d7d3b0549f11ed8a6b63",
+    "url": "/wfc-photo/static/css/main.93871ae5.chunk.css"
   },
   {
-    "revision": "7999edcbc30b43293376f5caff3b4ac5",
+    "revision": "208bf4e10142a21735ca1e847033c229",
     "url": "/wfc-photo/index.html"
   }
 ];
