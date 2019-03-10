@@ -1,36 +1,47 @@
 @charset "utf-8";
 
 .photo-detail {
+  box-sizing: border-box;
   position: fixed;
   z-index: 1200;
   width: 100vw;
   height: 100vh;
+  padding: 20px;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
 }
 
 .photo-detail .close-button {
   display: inline-block;
   padding: 10px;
   color: #fff;
-  position: absolute;
 }
 .photo-detail .close-button .material-icons {
   font-size: 30px;
 }
 
 .photo-detail > .photo {
-  width: 100%;
-  height: 100%;
+  flex: 1 1 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .photo-detail > .photo > img {
-  max-width: 100%;
-  max-height: 100%;
+  height: auto;
+}
+
+.info-card {
+  font-size: 2rem;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 /* reset */

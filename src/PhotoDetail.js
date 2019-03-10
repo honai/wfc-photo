@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import Slide from '@material-ui/core/Slide';
+import Typography from '@material-ui/core/Typography';
+import Moment from 'react-moment';
+
 import './detail.css';
 
 const PhotoDetail = (props) => {
@@ -14,15 +19,29 @@ const PhotoDetail = (props) => {
         }
       })
   }, [id]);
+  const [isTextInfoOpen, setTextInfoOpen] = useState(false);
+
+  const handleClick = () => {
+    setTextInfoOpen(!isTextInfoOpen);
+  }
 
   return (
     <div className='photo-detail'>
-      <Link to='/'>
-        <div className='close-button'><i className="material-icons">close</i></div>
-      </Link>
+      <div>
+        <Link to='/'>
+          <div className='close-button'><i className="material-icons">arrow_back_ios</i></div>
+        </Link>
+      </div>
       <div className='photo'>
         <img src={image.url} />
       </div>
+      <div><Button className='close-button' onClick={handleClick}><i className="material-icons" style={{color: '#fff'}}>info</i></Button></div>
+      <Slide direction="up" in={isTextInfoOpen} mountOnEnter unmountOnExit>
+        <div className='info-card'>
+          <Typography style={{fontSize: '1.2rem'}}>Title: {image.title}</Typography>
+          <Typography style={{fontSize: '1.2rem'}}>Date: <Moment format='YYYY/MM/DD'>{image.date}</Moment></Typography>
+        </div>
+      </Slide>
     </div>
   )
 }
