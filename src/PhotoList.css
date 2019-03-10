@@ -1,20 +1,24 @@
 @charset "utf-8";
 
 .photos-wrap {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1920px;
 }
 
-.photos-wrap > .item {
-  width: 98%;
+.photos-wrap .item {
+  transition: all ease .5s;
 }
 
 .photos-wrap > .item > img {
 }
 
+.list-img {
+  object-fit: cover;
+}
+
 @media screen and (min-width: 500px) {
   .photos-wrap > .item {
-    width: 48%;
+    /* width: 48%; */
   }
 }
