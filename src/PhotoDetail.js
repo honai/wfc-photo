@@ -32,7 +32,7 @@ const PhotoDetail = (props) => {
           <div className='close-button'><i className="material-icons">arrow_back_ios</i></div>
         </Link>
       </div>
-      <div className='photo'>
+      <div className={`photo ${isTextInfoOpen ? 'open': ''}`}>
         <img src={image.url} alt={image.description} />
       </div>
       <div className='button-wrap'><Button className='close-button' onClick={handleClick}><i className="material-icons" style={{color: '#fff'}}>info</i></Button></div>
