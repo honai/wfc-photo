@@ -27,7 +27,7 @@ const PhotoDetail = (props) => {
 
   return (
     <div className='photo-detail'>
-      <div>
+      <div className='button-wrap'>
         <Link to='/'>
           <div className='close-button'><i className="material-icons">arrow_back_ios</i></div>
         </Link>
@@ -35,7 +35,7 @@ const PhotoDetail = (props) => {
       <div className='photo'>
         <img src={image.url} alt={image.description} />
       </div>
-      <div><Button className='close-button' onClick={handleClick}><i className="material-icons" style={{color: '#fff'}}>info</i></Button></div>
+      <div className='button-wrap'><Button className='close-button' onClick={handleClick}><i className="material-icons" style={{color: '#fff'}}>info</i></Button></div>
       <Slide direction="up" in={isTextInfoOpen} mountOnEnter unmountOnExit>
         <div className='info-card'>
           <Typography style={{fontSize: '1.2rem'}}>Title: {image.title}</Typography>

@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import './TitleBar.css';
-import '../static/icon.png';
 
 const TitleBar = ({setGridSize}) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -23,7 +22,7 @@ const TitleBar = ({setGridSize}) => {
   return (
     <AppBar position="fixed" className='app-bar' style={{backgroundColor: '#29abe2'}}>
       <Toolbar className='tool-bar'>
-        <div className='titlebar-icon'><img src='icon.png' alt='icon' width='35px' /></div>
+        <div className='titlebar-icon'><img src='apple-touch-icon.png' alt='icon' width='35px' /></div>
         <Typography variant="h6" color="inherit">
           GridPics
         </Typography>

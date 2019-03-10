@@ -10,10 +10,11 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
+  /* display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: stretch; */
+  text-align: center;
 }
 
 .photo-detail .close-button {
@@ -21,19 +22,26 @@
   padding: 10px;
   color: #fff;
 }
+.button-wrap {
+  height: 64px;
+  text-align: left;
+}
 .photo-detail .close-button .material-icons {
   font-size: 30px;
 }
 
 .photo-detail > .photo {
-  flex: 1 1 auto;
-  display: flex;
+  height: calc(100vh - 168px);
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .photo-detail > .photo > img {
+  max-width: 100%;
+  max-height: 100%;
   height: auto;
+  width: auto;
 }
 
 .info-card {
