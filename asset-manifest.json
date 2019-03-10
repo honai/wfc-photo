@@ -1,13 +1,13 @@
 {
-  "main.css": "/wfc-photo/static/css/main.edcfd21a.chunk.css",
-  "main.js": "/wfc-photo/static/js/main.81156bf2.chunk.js",
-  "main.js.map": "/wfc-photo/static/js/main.81156bf2.chunk.js.map",
+  "main.css": "/wfc-photo/static/css/main.5c46397b.chunk.css",
+  "main.js": "/wfc-photo/static/js/main.70ba0db4.chunk.js",
+  "main.js.map": "/wfc-photo/static/js/main.70ba0db4.chunk.js.map",
   "runtime~main.js": "/wfc-photo/static/js/runtime~main.a7af6a8b.js",
   "runtime~main.js.map": "/wfc-photo/static/js/runtime~main.a7af6a8b.js.map",
-  "static/js/2.5136f8df.chunk.js": "/wfc-photo/static/js/2.5136f8df.chunk.js",
-  "static/js/2.5136f8df.chunk.js.map": "/wfc-photo/static/js/2.5136f8df.chunk.js.map",
+  "static/js/2.79e9072a.chunk.js": "/wfc-photo/static/js/2.79e9072a.chunk.js",
+  "static/js/2.79e9072a.chunk.js.map": "/wfc-photo/static/js/2.79e9072a.chunk.js.map",
   "index.html": "/wfc-photo/index.html",
-  "precache-manifest.2cb6951ce4c4f119accdb635981cda7b.js": "/wfc-photo/precache-manifest.2cb6951ce4c4f119accdb635981cda7b.js",
+  "precache-manifest.c4ab4b6465e1764c7b525c46b91f7e61.js": "/wfc-photo/precache-manifest.c4ab4b6465e1764c7b525c46b91f7e61.js",
   "service-worker.js": "/wfc-photo/service-worker.js",
-  "static/css/main.edcfd21a.chunk.css.map": "/wfc-photo/static/css/main.edcfd21a.chunk.css.map"
+  "static/css/main.5c46397b.chunk.css.map": "/wfc-photo/static/css/main.5c46397b.chunk.css.map"
 }
