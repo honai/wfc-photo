@@ -54,7 +54,7 @@ const App = () => {
     <HashRouter>
       <div>
         <TitleBar setGridSize={setGridSize} />
-        <div style={{height: '70px'}}></div>
+        <div style={{height: '75px'}}></div>
         <PhotoList imagesList={imagesList} onLinkClick={onLinkClick} gridSize={gridSize} />
         {apiStatus.isLoaded ? false : <div>Loading...</div>}
         {apiStatus.error ? <div>再度読み込みしてね</div> : false}
