@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { HashRouter, Route } from 'react-router-dom';
 import Observer from '@researchgate/react-intersection-observer';
 
 import PhotoDetail from './PhotoDetail';
@@ -51,7 +51,7 @@ const App = () => {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div>
         <TitleBar setGridSize={setGridSize} />
         <div style={{height: '70px'}}></div>
@@ -66,7 +66,7 @@ const App = () => {
           <PhotoDetail {...props} image={currentDetailStatus.imageInfo} />
         )} />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
