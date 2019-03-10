@@ -1,13 +1,13 @@
 {
-  "main.css": "/wfc-photo/static/css/main.bed45a37.chunk.css",
-  "main.js": "/wfc-photo/static/js/main.4767680b.chunk.js",
-  "main.js.map": "/wfc-photo/static/js/main.4767680b.chunk.js.map",
+  "main.css": "/wfc-photo/static/css/main.cf04ef3f.chunk.css",
+  "main.js": "/wfc-photo/static/js/main.224d4ff9.chunk.js",
+  "main.js.map": "/wfc-photo/static/js/main.224d4ff9.chunk.js.map",
   "runtime~main.js": "/wfc-photo/static/js/runtime~main.a7af6a8b.js",
   "runtime~main.js.map": "/wfc-photo/static/js/runtime~main.a7af6a8b.js.map",
   "static/js/2.b1b0c089.chunk.js": "/wfc-photo/static/js/2.b1b0c089.chunk.js",
   "static/js/2.b1b0c089.chunk.js.map": "/wfc-photo/static/js/2.b1b0c089.chunk.js.map",
   "index.html": "/wfc-photo/index.html",
-  "precache-manifest.ba2cbc41ef4273f5046eb35bba184ed9.js": "/wfc-photo/precache-manifest.ba2cbc41ef4273f5046eb35bba184ed9.js",
+  "precache-manifest.b82e77434df44f396b19bc7078baae59.js": "/wfc-photo/precache-manifest.b82e77434df44f396b19bc7078baae59.js",
   "service-worker.js": "/wfc-photo/service-worker.js",
-  "static/css/main.bed45a37.chunk.css.map": "/wfc-photo/static/css/main.bed45a37.chunk.css.map"
+  "static/css/main.cf04ef3f.chunk.css.map": "/wfc-photo/static/css/main.cf04ef3f.chunk.css.map"
 }
