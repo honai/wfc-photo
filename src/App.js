@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
+// import 'intersection-observer'; // optional polyfill
+import Observer from '@researchgate/react-intersection-observer';
+
 import PhotoDetail from './PhotoDetail';
 import PhotoList from './PhotoList';
 import TitleBar from './Component/TitleBar';
 import './animation.css';
 
 const App = () => {
-  const [listSize, setListSize] = useState({before: 0, current: 20});
+  const [listSize, setListSize] = useState({before: 0, current: 0});
   const [gridSize, setGridSize] = useState(1);
   const [apiStatus, setApiStatus] = useState({isLoaded: false, error: false});
   const [imagesList, setImagesList] = useState([]);
@@ -41,6 +44,14 @@ const App = () => {
     setListSize({before: listSize.current, current: listSize.current + size});
   }
 
+  function handleIntersection() {
+    gainListSize(50);
+  }
+
+  const intersectionOption = {
+    onChange: handleIntersection,
+  }
+
   return (
     <BrowserRouter>
       <div>
@@ -49,7 +60,9 @@ const App = () => {
         <PhotoList imagesList={imagesList} onLinkClick={onLinkClick} gridSize={gridSize} />
         {apiStatus.isLoaded ? false : <div>Loading...</div>}
         {apiStatus.error ? <div>再度読み込みしてね</div> : false}
-        <button onClick={() => gainListSize(10)}>もっと読み込む</button>
+        <Observer {...intersectionOption}>
+        <div></div>
+        </Observer>
 
         <Route path='/detail/:id' render={(props) => (
           <PhotoDetail {...props} image={currentDetailStatus.imageInfo} />
