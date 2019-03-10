@@ -23,7 +23,7 @@ const TitleBar = ({setGridSize}) => {
     <AppBar position="fixed" className='app-bar' color='primary'>
       <Toolbar className='tool-bar'>
         <Typography variant="h6" color="inherit">
-          Photo
+          GridPics
         </Typography>
         <Button onClick={handleClick}
           aria-owns={anchorEl ? 'simple-menu' : undefined}

@@ -33,13 +33,14 @@ const PhotoDetail = (props) => {
         </Link>
       </div>
       <div className='photo'>
-        <img src={image.url} />
+        <img src={image.url} alt={image.description} />
       </div>
       <div><Button className='close-button' onClick={handleClick}><i className="material-icons" style={{color: '#fff'}}>info</i></Button></div>
       <Slide direction="up" in={isTextInfoOpen} mountOnEnter unmountOnExit>
         <div className='info-card'>
           <Typography style={{fontSize: '1.2rem'}}>Title: {image.title}</Typography>
           <Typography style={{fontSize: '1.2rem'}}>Date: <Moment format='YYYY/MM/DD'>{image.date}</Moment></Typography>
+          <Typography style={{fontSize: '1.2rem'}}>Author: {image.author}</Typography>
         </div>
       </Slide>
     </div>
