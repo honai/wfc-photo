@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-// import 'intersection-observer'; // optional polyfill
 import Observer from '@researchgate/react-intersection-observer';
 
 import PhotoDetail from './PhotoDetail';
 import PhotoList from './PhotoList';
 import TitleBar from './Component/TitleBar';
-import './animation.css';
 
 const App = () => {
   const [listSize, setListSize] = useState({before: 0, current: 0});
